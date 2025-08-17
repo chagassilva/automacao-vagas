@@ -4,7 +4,25 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
+
+      width: 200px;
+      height: 200px;
+      animation: gradient-animation 5s infinite alternate; /* Name, duration, iteration, direction */
+
   }
+
+      @keyframes gradient-animation {
+      0% {
+        background-image: linear-gradient(0deg, #ff0000, #0000ff);
+      }
+      50% {
+        background-image: linear-gradient(180deg, #00ff00, #ffff00);
+      }
+      100% {
+        background-image: linear-gradient(360deg, #0000ff, #ff0000);
+      }
+    }
+    
   form {
     background: #fff;
     max-width: 1000px;
@@ -15,6 +33,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+    z-index: 9999999;
   }
   label {
     position: relative;
